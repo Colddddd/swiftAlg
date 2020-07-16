@@ -26,7 +26,7 @@ var str = "Hello, playground"
  */
 
  // 第一种：brute force   超时
- // On方 的时间复杂度找出所有子串，n 的时间复杂度 检查是否是回文
+ // On方 的时间复杂度找出所有子串，n 的时间复杂度 检查是否是回文, 一共是 On 3次方
 
 /*
 class Solution {
@@ -62,16 +62,51 @@ class Solution {
 */
 
 
+// 中心扩散法
+/**
+ 每2个相邻的字母 中间的间隙也算一个 字符的话，一共有 n + （ n - 1） 个空隙，方便 奇数 和 偶数 找中间点
+
+ acbca
+
+ acbbca
+ */
 
 class Solution {
     func longestPalindrome(_ s: String) -> String {
-        
-        return ""
+        guard !s.isEmpty else { return "" }
+
+        var start = 0, end = 0
+        let chars = [Character](s)
+
+        for i in 0..<chars.count {
+            let len1 = getMaxLength(chars, i, i)
+            let len2 = getMaxLength(chars, i, i+1)
+            let len = max(len1, len2)
+
+            print(len)
+            if len > (end - start + 1) {
+                start = i - (len - 1) / 2
+                end = i + len / 2
+            }
+        }
+        return String(chars[start...end])
+    }
+
+    // 获取某个中心点开始扩散的最大长度
+    func getMaxLength(_ chars: [Character], _ left: Int, _ right: Int) -> Int {
+        var L = left, R = right
+
+        while L >= 0 && R < chars.count && (chars[L] == chars[R]) {
+            L -= 1
+            R += 1
+        }
+        // 此时已经越界，需 -1
+        return R - L - 1
     }
 }
 
 let s = Solution()
-print(s.longestPalindrome("a"))
+print(s.longestPalindrome("babad"))
 
 
 /*
