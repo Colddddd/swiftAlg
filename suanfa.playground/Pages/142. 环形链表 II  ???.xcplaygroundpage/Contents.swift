@@ -41,24 +41,26 @@ class Solution {
         
         var slow = head
         var fast = head
-        
-        // 有环就 进 while
+
         while fast != nil && fast?.next != nil {
             slow = slow?.next
             fast = fast!.next?.next
-            
-            if slow?.val == fast?.val {
-                slow = head
-                
-                // 怎么结束循环 ？
-                while slow?.val != fast?.val {
-                    slow = slow?.next
-                    fast = fast?.next
-                }
-                
-                return slow
+
+            if slow === fast {
+                break;
             }
         }
-        return nil
+        if fast == nil || fast?.next == nil {
+            return nil
+        }
+
+        fast = head
+        while slow !== fast {
+            fast = fast?.next
+            slow = slow?.next
+        }
+
+        return slow
     }
 }
+
