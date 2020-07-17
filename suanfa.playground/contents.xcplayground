@@ -18,10 +18,12 @@
         <page name='5. 最长回文子串 '/>
         <page name='6. z 字变换'/>
         <page name='287. 寻找重复数 '/>
-        <page name='142. 环形链表 II  ???'/>
         <page name='70. 爬楼梯'/>
         <page name='14. 最长公共前缀'/>
         <page name='209. 长度最小的子数组'/>
         <page name='120. 三角形最小路径和'/>
+        <page name='35.搜索插入位置'/>
+        <page name='142. 环形链表 II  '/>
+        <page name='27.移除元素'/>
     </pages>
 </playground>
