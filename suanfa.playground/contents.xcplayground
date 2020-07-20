@@ -25,5 +25,6 @@
         <page name='35.搜索插入位置'/>
         <page name='142. 环形链表 II  '/>
         <page name='27.移除元素'/>
+        <page name='167. 两数之和 II - 输入有序数组'/>
     </pages>
 </playground>
