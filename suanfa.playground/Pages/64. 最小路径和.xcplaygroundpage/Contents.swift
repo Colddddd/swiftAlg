@@ -20,10 +20,39 @@ import Foundation
  
  链接：https://leetcode-cn.com/problems/minimum-path-sum
  */
+
+/**
+
+ dp 思想
+
+ 从 i = 0，j = 0 开始
+
+ 第一行，只能往右加
+
+ 第一列，只能往下加
+
+ 非第一行，第一列，由左边 和上边相加
+ */
 class Solution {
     func minPathSum(_ grid: [[Int]]) -> Int {
-        
-        return 0
+        let line = grid.count
+        let column = grid[0].count
+        var grid = grid
+
+        for i in 0..<line {
+            for j in 0..<column {
+                if i == 0 && j == 0 { continue }
+                if i == 0 {
+                    grid[i][j] = grid[i][j-1] + grid[i][j]
+                } else if j == 0 {
+                    grid[i][j] = grid[i-1][j] + grid[i][j]
+                } else {
+                    grid[i][j] = min(grid[i-1][j], grid[i][j-1]) + grid[i][j]
+                }
+            }
+        }
+
+        return grid[line-1][column-1]
     }
 }
 
