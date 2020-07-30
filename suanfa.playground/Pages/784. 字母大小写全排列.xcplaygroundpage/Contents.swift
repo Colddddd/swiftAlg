@@ -49,12 +49,12 @@ class Solution {
         var chars = [Character](s)
         
         if idx == chars.count {
+            print(s)
             ans.append(s)
             return
         }
         
         let char = chars[idx]
-        
         if char.isLetter {
             dfs(s: &s, idx: idx + 1, ans: &ans)
             
@@ -73,4 +73,5 @@ class Solution {
 
 let s = Solution()
 print(s.letterCasePermutation("a1b2"))
+
 
