@@ -28,5 +28,6 @@
         <page name='167. 两数之和 II - 输入有序数组'/>
         <page name='64. 最小路径和'/>
         <page name='784. 字母大小写全排列'/>
+        <page name='46. 全排列'/>
     </pages>
 </playground>

@@ -53,18 +53,16 @@ class Solution {
             ans.append(s)
             return
         }
-        
+
+        dfs(s: &s, idx: idx + 1, ans: &ans)
+
         let char = chars[idx]
+
         if char.isLetter {
-            dfs(s: &s, idx: idx + 1, ans: &ans)
-            
             if let newascii = char.asciiValue {
                 chars[idx] = Character(UnicodeScalar(newascii ^ 32))
                 s = String(chars)
             }
-            
-            dfs(s: &s, idx: idx + 1, ans: &ans)
-        } else {
             dfs(s: &s, idx: idx + 1, ans: &ans)
         }
     }
