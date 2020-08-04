@@ -29,5 +29,7 @@
         <page name='64. 最小路径和'/>
         <page name='784. 字母大小写全排列'/>
         <page name='46. 全排列'/>
+        <page name='415. 字符串相加'/>
+        <page name='47. 全排列 II '/>
     </pages>
 </playground>
