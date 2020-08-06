@@ -35,7 +35,25 @@ import Foundation
  链接：https://leetcode-cn.com/problems/house-robber-iii
  */
 
-// 递归怎么递 ？  状态怎么记 ？ 要转二叉树？
+// 递归怎么递 ？  状态怎么记 ？ 要转二叉树？ 根节点肯定无法跟左右节点共存，但是根节点也算是中间点
+// 也就意味着，根节点和左右节点 只能去一个值
+
+
+
+/**
+
+根节点如果偷了，那么子节点必然偷不了
+子节点如果偷了，左右2个节点可以一起偷
+
+如果根节点 > 左+ 右，那么必偷根节点
+如果根节点 = 左+ 右，继续判断
+
+是不是要倒序偷 ？
+
+
+意味着：要么取 根节点，要么取 左右之和。
+
+ */
 
 public class TreeNode {
     public var val: Int
@@ -49,8 +67,21 @@ public class TreeNode {
 }
 
 class Solution {
+
     func rob(_ root: TreeNode?) -> Int {
-        
-        return 0
+        let rob = robOrNot(root)
+        return max(rob[0], rob[1])
     }
+
+    func robOrNot(_ root: TreeNode?) -> [Int] {
+        guard root != nil else { return [0,0] }
+        let left  = robOrNot(root!.left)
+        let right = robOrNot(root!.right)
+//        var res = [Int]()
+        var res = [0,0]
+        res[0] = max(left[0], left[1]) +  max(right[0], right[1])
+        res[1] = left[0] + right[0] + root!.val
+        return res
+    }
+    
 }

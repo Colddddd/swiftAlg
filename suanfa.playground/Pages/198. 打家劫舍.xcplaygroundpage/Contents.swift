@@ -32,12 +32,33 @@ import Foundation
  
  递归 + dp ？
  
- 1，3，4，5，6
+
+
+ 题解: 每种状态都存在  偷与不偷，以此求出 状态转移方程
+
+ 偷吗:    2  7  9  3  1
+ 要偷:    2  7  11 7  12
+ 不偷:    0  2  7  11 11
+
+ r[0]  = 0  r[i]  = nr[i-1] + i
+ nr[0] = 0  nr[i] = max(nr[i-1], r[i-1])
+
+ 即：当前数 i偷，则上一个 i-1 不能偷，也就是不能偷的 res  + 当前 value
+ 当前数 不偷，即 i- 1 可以偷，也可以不偷， 即2个方式的最大值
  */
 
 class Solution {
     func rob(_ nums: [Int]) -> Int {
-     
-        return 0
+        var r = 0, nr = 0
+        for i in  0..<nums.count {
+            let pre = max(r, nr)
+            r = nr + nums[i]
+            nr = pre
+        }
+        return max(r, nr)
     }
 }
+
+let s = Solution()
+print(s.rob([2,7,9,3,1]))
+
