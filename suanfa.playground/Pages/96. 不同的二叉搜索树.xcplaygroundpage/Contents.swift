@@ -21,10 +21,12 @@ import Foundation
  链接：https://leetcode-cn.com/problems/unique-binary-search-trees
  */
 
+/**
+ dp 。累积求和
+ */
 class Solution {
     func numTrees(_ n: Int) -> Int {
-        guard n > 0 else { return 0 }
-        guard n > 1 else { return 1 }
+        guard n > 1 else { return n }
 
         var res = Array.init(repeating: 0, count: n + 1)
         res[0] = 1
