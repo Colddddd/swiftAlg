@@ -16,7 +16,6 @@
         <page name='6. z 字变换'/>
         <page name='7. 整数反转 '/>
         <page name='14. 最长公共前缀'/>
-        <page name='15. 三数之和'/>
         <page name='21. 合并两个有序链表'/>
         <page name='27.移除元素'/>
         <page name='35.搜索插入位置'/>
@@ -41,5 +40,7 @@
         <page name='784. 字母大小写全排列'/>
         <page name='面试题 04.04. 检查平衡性'/>
         <page name='Untitled Page 3'/>
+        <page name='15. 三数之和 ????'/>
+        <page name='104. 二叉树的最大深度 '/>
     </pages>
 </playground>
