@@ -39,7 +39,6 @@
         <page name='415. 字符串相加'/>
         <page name='784. 字母大小写全排列'/>
         <page name='面试题 04.04. 检查平衡性'/>
-        <page name='Untitled Page 3'/>
         <page name='15. 三数之和 ????'/>
         <page name='104. 二叉树的最大深度 '/>
         <page name='111. 二叉树的最小深度'/>
@@ -48,6 +47,9 @@
         <page name='217. 存在重复元素'/>
         <page name='53. 最大子序和'/>
         <page name='236. 二叉树的最近公共祖先'/>
-        <page name='1143. 最长公共子序列'/>
+        <page name='459. 重复的子字符串'/>
+        <page name='1143. 最长公共子序列 ??'/>
+        <page name='node'/>
+        <page name='79. 单词搜索'/>
     </pages>
 </playground>
