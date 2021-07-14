@@ -51,5 +51,6 @@
         <page name='1143. 最长公共子序列 ??'/>
         <page name='node'/>
         <page name='79. 单词搜索'/>
+        <page name='83. 删除排序链表中的重复元素'/>
     </pages>
 </playground>
