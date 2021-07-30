@@ -53,5 +53,6 @@
         <page name='79. 单词搜索'/>
         <page name='83. 删除排序链表中的重复元素'/>
         <page name='66. 加一 '/>
+        <page name='202. 快乐数 '/>
     </pages>
 </playground>
