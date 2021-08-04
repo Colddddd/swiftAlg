@@ -54,5 +54,6 @@
         <page name='83. 删除排序链表中的重复元素'/>
         <page name='66. 加一 '/>
         <page name='202. 快乐数 '/>
+        <page name='581. 最短无序连续子数组'/>
     </pages>
 </playground>
