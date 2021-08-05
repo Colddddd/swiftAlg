@@ -55,5 +55,6 @@
         <page name='66. 加一 '/>
         <page name='202. 快乐数 '/>
         <page name='581. 最短无序连续子数组'/>
+        <page name='611. 有效三角形的个数'/>
     </pages>
 </playground>
