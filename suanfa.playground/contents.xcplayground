@@ -57,5 +57,7 @@
         <page name='581. 最短无序连续子数组'/>
         <page name='611. 有效三角形的个数'/>
         <page name='413. 等差数列划分'/>
+        <page name='516. 最长回文子序列'/>
+        <page name='551. 学生出勤记录 I'/>
     </pages>
 </playground>
